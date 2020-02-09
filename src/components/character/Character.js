@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react'; 
-
+import {Link} from 'react-router-dom'
 function Character({match}){
     
     useEffect(() =>{
         fetchCharacters(); 
+        
     })
     const [character, setCharacter ] = useState({
         origin:{},
@@ -28,6 +29,7 @@ function Character({match}){
             <p>Species: {character.species}</p>
             <p>Origin: {character.origin.name}</p>
             <p>Location: {character.location.name}</p>
+            <Link to="/"><button className="btn btn-lg btn-dark">Return</button></Link>
         </div>    
     )
 }

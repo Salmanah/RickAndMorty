@@ -34,9 +34,7 @@ class CharacterList extends React.Component {
         } 
     }
 
-    componentWillUnmount(){
-        this.abortController.abort();
-    }
+  
 
     render() {
         
@@ -44,7 +42,7 @@ class CharacterList extends React.Component {
            return (
                 <div className= "col-md-4 w-100" key={character.name} style={{"paddingTop":"10px"}}>
                     <Link to = {`/${character.id}`} style={{"textDecoration": "none"}}>
-                            <div className="card h-100" style={{}}>
+                            <div className="card h-100">
                                 <button style={{"width":"100%","height":"100%","border":"none","backgroundColor":"#6c7b95"}}>
                                     <img className="card-img-top" id="imageBox"src={character.image} alt=""/>
                                     <div className="card-body">
