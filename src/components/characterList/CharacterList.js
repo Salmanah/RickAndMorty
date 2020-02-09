@@ -55,7 +55,6 @@ class CharacterList extends React.Component {
                             </div>
                     </Link>
                 </div>
-            
            )
         });
         
