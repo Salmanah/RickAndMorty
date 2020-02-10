@@ -1,0 +1,9 @@
+.card{
+    margin-left: auto;
+    margin-right: auto;
+    width: 18rem;
+}
+
+.list-group-item{
+    background-color: rgb(108, 123, 149) !important;
+}

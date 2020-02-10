@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'; 
 import {Link} from 'react-router-dom'
+import style from './Character.modules.css'
 function Character({match}){
     
     useEffect(() =>{
@@ -21,16 +22,20 @@ function Character({match}){
     }
 
     return(
-        <div>
+        <div className='container' style={{"marginBottom": "100px"}}>
             <h1>{character.name}</h1>
-            <img src={character.image} alt=""/>
-            <p>Gender: {character.gender}</p>
-            <p>Status: {character.status}</p>
-            <p>Species: {character.species}</p>
-            <p>Origin: {character.origin.name}</p>
-            <p>Location: {character.location.name}</p>
-            <Link to="/"><button className="btn btn-lg btn-dark">Return</button></Link>
-        </div>    
+            <div className="card" style={style.card}>
+            <img src={character.image} className="card-img-top" alt={character.image}/>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Gender: {character.gender}</li>
+                <li class="list-group-item">Status: {character.status}</li>
+                <li class="list-group-item">Species:{character.species}</li>
+                <li class="list-group-item">Origin:{character.origin.name}</li>
+                <li class="list-group-item">Location:{character.location.name}</li>
+                <li class="list-group-item"><Link to="/"><button className="btn btn-lg btn-dark" >Return</button></Link></li>
+            </ul>
+        </div>
+    </div>    
     )
 }
 

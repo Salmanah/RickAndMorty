@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 
-
+import styles from './CharacterList.module.css'
 
 class CharacterList extends React.Component {
     constructor(props){
@@ -46,8 +46,8 @@ class CharacterList extends React.Component {
                                 <button style={{"width":"100%","height":"100%","border":"none","backgroundColor":"#6c7b95"}}>
                                     <img className="card-img-top" id="imageBox"src={character.image} alt=""/>
                                     <div className="card-body">
-                                        <h5 className="card-title">{character.name}</h5>
-                                        <p className="card-text">Location: {character.location.name}</p>
+                                        <h5 className={`card-title ${styles.cardTitle}`}>{character.name}</h5>
+                                        <p className={`card-text ${styles.cardContent}`}>Location: {character.location.name}</p>
                                     </div>
                                 </button>
                             </div>
