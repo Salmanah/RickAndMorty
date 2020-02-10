@@ -26,13 +26,13 @@ function Character({match}){
             <h1>{character.name}</h1>
             <div className="card" style={style.card}>
             <img src={character.image} className="card-img-top" alt={character.image}/>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Gender: {character.gender}</li>
-                <li class="list-group-item">Status: {character.status}</li>
-                <li class="list-group-item">Species:{character.species}</li>
-                <li class="list-group-item">Origin:{character.origin.name}</li>
-                <li class="list-group-item">Location:{character.location.name}</li>
-                <li class="list-group-item"><Link to="/"><button className="btn btn-lg btn-dark" >Return</button></Link></li>
+            <ul className="list-group list-group-flush">
+                <li className="list-group-item">Gender: {character.gender}</li>
+                <li className="list-group-item">Status: {character.status}</li>
+                <li className="list-group-item">Species:{character.species}</li>
+                <li className="list-group-item">Origin:{character.origin.name}</li>
+                <li className="list-group-item">Location:{character.location.name}</li>
+                <li className="list-group-item"><Link to="/"><button className="btn btn-lg btn-dark" >Return</button></Link></li>
             </ul>
         </div>
     </div>    
